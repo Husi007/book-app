@@ -3,11 +3,10 @@
 ## Pre Requisite:
 - Install *NodeJS* following [these](https://tecadmin.net/install-nodejs-with-nvm) guidelines.
 - Install *PostgreSQL* following [these](https://computingforgeeks.com/installing-postgresql-database-server-on-ubuntu/) guidelines.
-- Please set your configurations in these files of code suite. [.env](https://github.com/Husi007/to-do-app/blob/master/nodeJS-backend/.env) and [config.json-](https://github.com/Husi007/to-do-app/blob/master/nodeJS-backend/.env).
+- Please set your configurations in these files of code suite i.e [.env](https://github.com/Husi007/book-app/blob/master/.env) and [config.json](https://github.com/Husi007/book-app/blob/master/config/config.json).
 
 ## Install Dependecies
 - To install required dependiencies in your application, simply run: `npm install`.
-- Set you data base credentials in .env file.
 - Rename `vscode` directory to `.vscode` in order to set `VSCode settings`.
 
 ## Boot Application
