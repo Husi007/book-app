@@ -16,6 +16,10 @@ module.exports = {
         type: new Sequelize.STRING(255),
         allowNull: false,
       },
+      year: {
+        type: new Sequelize.STRING(255),
+        allowNull: false,
+      },
       userId: {
         type: Sequelize.INTEGER.UNSIGNED,
         references: {
