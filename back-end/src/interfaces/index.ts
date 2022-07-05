@@ -34,7 +34,7 @@ export interface IBookCreationAttributes
 
 export interface IUserAttributes {
   id: number;
-  name: string;
+  email: string;
   username: string;
   password: string;
 }

@@ -1,6 +1,5 @@
 export const ROUTES = {
   LOGIN: "/login",
-  HOME: "/home",
   BOOK: "/book",
   SIGN_IN: "/signIn",
   SIGN_UP: "/signUp",
@@ -13,6 +12,9 @@ export const BUTTONS = {
   SIGN_UP: {
     LABEL: 'Sign Up',
   },
+  CREATE_BOOK: {
+    LABEL: 'Create Book',
+  },
 }
 
 export const HEADINGS = {
@@ -21,6 +23,9 @@ export const HEADINGS = {
   },
   SIGN_UP: {
     LABEL: 'Sign Up',
+  },
+  CREATE_BOOK: {
+    LABEL: 'Create Book',
   },
 }
 
@@ -37,9 +42,6 @@ export const LINKS = {
   SIGN_IN: {
     LABEL: 'Sign In',
   },
-  HOME: {
-    LABEL: 'Home',
-  },
   BOOK: {
     LABEL: 'Book',
   },
@@ -49,4 +51,7 @@ export const PLACE_HOLDERS = {
   EMAIL: 'Enter email here ...',
   USER_NAME: 'Enter username here ...',
   PASSWORD: 'Enter password here ...',
+  TITLE: 'Enter title here ...',
+  YEAR: 'Enter year here ...',
+  DESCRIPTION: 'Enter description here ...',
 }

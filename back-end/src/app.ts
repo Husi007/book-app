@@ -1,5 +1,5 @@
 import { json } from 'body-parser';
-import cors  from 'cors';
+import cors from 'cors';
 import express from 'express';
 import { ErrorConstants } from './centeralizedErrorHandler/constants';
 import { NoResourceFoundError404 } from './centeralizedErrorHandler/notFound404';

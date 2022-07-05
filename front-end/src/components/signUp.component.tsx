@@ -16,7 +16,7 @@ const SignUp: React.FC = (): JSX.Element => {
     try {
       AuthService.signUp(username, email, password).then(
         () => {
-          navigate(ROUTES.HOME);
+          navigate(ROUTES.BOOK);
           window.location.reload();
         },
         (error: any) => {

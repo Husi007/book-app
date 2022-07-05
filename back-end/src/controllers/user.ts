@@ -8,8 +8,8 @@ class UserController {
       const result = await userService.signUp(req.body);
 
       return res.status(httpStatusCodes.CREATED).send({
+        email: result.email,
         token: result.token,
-        username: result.username,
       });
     } catch (error) {
       return next(error);
@@ -21,8 +21,8 @@ class UserController {
       const result = await userService.signIn(req.body);
 
       return res.status(httpStatusCodes.OK).send({
+        email: result.email,
         token: result.token,
-        username: result.username,
       });
     } catch (error) {
       return next(error);

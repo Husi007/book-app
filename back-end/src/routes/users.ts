@@ -8,7 +8,7 @@ const router = express.Router();
 router.post(
   '/signup',
   [
-    ROUTE_VALIDATIONS.BODY.NAME,
+    ROUTE_VALIDATIONS.BODY.EMAIL,
     ROUTE_VALIDATIONS.BODY.USERNAME,
     ROUTE_VALIDATIONS.BODY.PASSWORD,
   ],
@@ -18,11 +18,7 @@ router.post(
 
 router.post(
   '/signin',
-  [
-    ROUTE_VALIDATIONS.BODY.NAME,
-    ROUTE_VALIDATIONS.BODY.USERNAME,
-    ROUTE_VALIDATIONS.BODY.PASSWORD,
-  ],
+  [ROUTE_VALIDATIONS.BODY.EMAIL, ROUTE_VALIDATIONS.BODY.PASSWORD],
   validateRequest,
   usersController.signIn
 );

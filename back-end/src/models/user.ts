@@ -8,7 +8,7 @@ class User
   implements IUserAttributes
 {
   public id!: number;
-  public name!: string;
+  public email!: string;
   public username!: string;
   public password!: string;
   public readonly createdAt!: Date;
@@ -17,14 +17,14 @@ class User
 
 User.init(
   {
+    email: {
+      allowNull: false,
+      type: new DataTypes.STRING(255),
+    },
     id: {
       autoIncrement: true,
       primaryKey: true,
       type: DataTypes.INTEGER.UNSIGNED,
-    },
-    name: {
-      allowNull: false,
-      type: new DataTypes.STRING(255),
     },
     password: {
       allowNull: false,

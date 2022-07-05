@@ -12,7 +12,7 @@ export const ROUTE_VALIDATIONS = {
       .isLength({ max: 255, min: 4 })
       .notEmpty()
       .withMessage('Description must be of 4 and 255 characters length.'),
-    NAME: body('name')
+    EMAIL: body('email')
       .isString()
       .trim()
       .isLength({ max: 30, min: 4 })

@@ -14,7 +14,7 @@ const SignIn: React.FC = (): JSX.Element => {
     try {
       AuthService.signIn(email, password).then(
         () => {
-          navigate(ROUTES.HOME);
+          navigate(ROUTES.BOOK);
           window.location.reload();
         },
         (error: any) => {

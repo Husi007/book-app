@@ -8,7 +8,7 @@ import { Password } from './password';
 
 class UserService {
   public async signUp(reqBody: IUserCreationAttributes) {
-    const { username, password, name } = reqBody;
+    const { username, password, email } = reqBody;
     const existingUser = await User.findOne({
       where: {
         username,
@@ -20,7 +20,7 @@ class UserService {
     }
 
     const user = await User.create({
-      name,
+      email,
       password,
       username,
     });
@@ -34,15 +34,15 @@ class UserService {
       { expiresIn: 60 * 60 }
     );
 
-    return { token, username };
+    return { token, email };
   }
 
   public async signIn(reqBody: IUserCreationAttributes) {
-    const { username, password } = reqBody;
+    const { password, email } = reqBody;
 
     const existingUser = await User.findOne({
       where: {
-        username,
+        email,
       },
     });
 
@@ -61,14 +61,14 @@ class UserService {
 
     const token = jwt.sign(
       {
+        email: existingUser.email,
         id: existingUser.id,
-        username: existingUser.username,
       },
       process.env.JWT_KEY!,
       { expiresIn: 60 * 60 }
     );
 
-    return { token, username };
+    return { token, email };
   }
 }
 
