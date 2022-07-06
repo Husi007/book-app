@@ -1,57 +1,57 @@
 export const ROUTES = {
-  LOGIN: "/login",
-  BOOK: "/book",
-  SIGN_IN: "/signIn",
-  SIGN_UP: "/signUp",
+  BOOK: '/book',
+  LOGIN: '/login',
+  SIGN_IN: '/signIn',
+  SIGN_UP: '/signUp',
 };
 
 export const BUTTONS = {
+  CREATE_BOOK: {
+    LABEL: 'Create Book',
+  },
   LOGIN: {
     LABEL: 'Login',
   },
   SIGN_UP: {
     LABEL: 'Sign Up',
   },
-  CREATE_BOOK: {
-    LABEL: 'Create Book',
-  },
-}
+};
 
 export const HEADINGS = {
-  LOGIN: {
-    LABEL: 'Login',
-  },
-  SIGN_UP: {
-    LABEL: 'Sign Up',
-  },
   CREATE_BOOK: {
     LABEL: 'Create Book',
   },
-}
-
-export const LINKS = {
   LOGIN: {
     LABEL: 'Login',
   },
   SIGN_UP: {
     LABEL: 'Sign Up',
   },
-  SIGN_OUT: {
-    LABEL: 'Sign Out',
+};
+
+export const LINKS = {
+  BOOK: {
+    LABEL: 'Book',
+  },
+  LOGIN: {
+    LABEL: 'Login',
   },
   SIGN_IN: {
     LABEL: 'Sign In',
   },
-  BOOK: {
-    LABEL: 'Book',
+  SIGN_OUT: {
+    LABEL: 'Sign Out',
   },
-}
+  SIGN_UP: {
+    LABEL: 'Sign Up',
+  },
+};
 
 export const PLACE_HOLDERS = {
+  DESCRIPTION: 'Enter description here ...',
   EMAIL: 'Enter email here ...',
-  USER_NAME: 'Enter username here ...',
   PASSWORD: 'Enter password here ...',
   TITLE: 'Enter title here ...',
+  USER_NAME: 'Enter username here ...',
   YEAR: 'Enter year here ...',
-  DESCRIPTION: 'Enter description here ...',
-}
+};

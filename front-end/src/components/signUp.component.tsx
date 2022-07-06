@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import AuthService from "../services/auth.service";
 import { useNavigate } from "react-router-dom";
+import AuthService from "../services/auth.service";
 import { BUTTONS, HEADINGS, PLACE_HOLDERS, ROUTES } from "./constants";
 
 const SignUp: React.FC = (): JSX.Element => {

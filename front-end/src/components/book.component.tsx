@@ -1,15 +1,13 @@
-import React, { useState, useEffect } from "react";
-// import AuthService from "../services/auth.service";
-import BookService from "../services/book.service";
-import { IBookResponse } from "../services/intefaces";
-import { BUTTONS, HEADINGS, PLACE_HOLDERS } from "./constants";
+import React, { useState } from 'react';
+import BookService from '../services/book.service';
+import { IBookResponse } from '../services/intefaces';
+import { BUTTONS, HEADINGS, PLACE_HOLDERS } from './constants';
 
 const BookComponent: React.FC = (): JSX.Element => {
-  const [books, setBooks] = useState<Array<IBookResponse>>([]);
-  // const [currentUser, setCurrentUser] = useState<IUser | undefined>(undefined);
-  const [title, setTitle] = useState("");
-  const [year, setYear] = useState("");
-  const [description, setDescription] = useState("");
+  const [books, setBooks] = useState<IBookResponse[]>([]);
+  const [title, setTitle] = useState('');
+  const [year, setYear] = useState('');
+  const [description, setDescription] = useState('');
 
   const getBooks = (): void => {
     BookService.getBooks().then(
@@ -21,15 +19,6 @@ const BookComponent: React.FC = (): JSX.Element => {
       }
     );
   };
-
-  useEffect(() => {
-    // const user = AuthService.getCurrentUser();
-    // if (user?.userAccessToken !== "") {
-    //   setCurrentUser(user);
-    // }
-
-    // getBooks();
-  }, []);
 
   const createBook = (event: React.SyntheticEvent): void => {
     event.preventDefault();

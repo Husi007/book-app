@@ -1,16 +1,13 @@
-import axios, { AxiosResponse } from "axios";
-import * as dotenv from "dotenv";
-import { API_PATHS } from "./constants";
-import { IUser, IUserResponse } from "./intefaces";
-
-dotenv.config();
+import axios, { AxiosResponse } from 'axios';
+import { API_PATHS, REACT_APP_API_URL } from './constants';
+import { IUser, IUserResponse } from './intefaces';
 
 const setLocalStorage = (response: IUserResponse) => {
-  const userAccessToken: string = response?.token ? response.token : "";
-  const email: string = response?.email ? response.email : "";
+  const userAccessToken: string = response?.token ? response.token : '';
+  const email: string = response?.email ? response.email : '';
 
-  localStorage.setItem("userAccessToken", userAccessToken);
-  localStorage.setItem("email", email);
+  localStorage.setItem('userAccessToken', userAccessToken);
+  localStorage.setItem('email', email);
 };
 
 const signUp = (
@@ -19,10 +16,10 @@ const signUp = (
   password: string
 ): Promise<IUserResponse> => {
   return axios
-    .post(process.env.REACT_APP_API_URL + API_PATHS.SIGN_UP, {
-      username,
+    .post(`${REACT_APP_API_URL}${API_PATHS.SIGN_UP}`, {
       email,
       password,
+      username,
     })
     .then((response: AxiosResponse<IUserResponse>): IUserResponse => {
       setLocalStorage(response.data);
@@ -33,7 +30,7 @@ const signUp = (
 
 const signIn = (email: string, password: string): Promise<IUserResponse> => {
   return axios
-    .post(process.env.REACT_APP_API_URL + API_PATHS.SIGN_IN, {
+    .post(`${REACT_APP_API_URL}${API_PATHS.SIGN_IN}`, {
       email,
       password,
     })
@@ -45,17 +42,17 @@ const signIn = (email: string, password: string): Promise<IUserResponse> => {
 };
 
 const signOut = (): void => {
-  localStorage.removeItem("userAccessToken");
-  localStorage.removeItem("email");
+  localStorage.removeItem('userAccessToken');
+  localStorage.removeItem('email');
 };
 
 const getCurrentUser = (): IUser => {
-  const userAccessToken: string = localStorage.getItem("userAccessToken")
-    ? (localStorage.getItem("userAccessToken") as string)
-    : "";
-  const email: string = localStorage.getItem("email")
-    ? (localStorage.getItem("email") as string)
-    : "";
+  const userAccessToken: string = localStorage.getItem('userAccessToken')
+    ? (localStorage.getItem('userAccessToken') as string)
+    : '';
+  const email: string = localStorage.getItem('email')
+    ? (localStorage.getItem('email') as string)
+    : '';
 
   return {
     email,
@@ -64,10 +61,10 @@ const getCurrentUser = (): IUser => {
 };
 
 const AuthService = {
-  signUp,
+  getCurrentUser,
   signIn,
   signOut,
-  getCurrentUser,
+  signUp,
 };
 
 export default AuthService;
