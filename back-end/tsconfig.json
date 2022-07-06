@@ -44,10 +44,10 @@
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */,
     "lib": ["es2016", "dom"],
     "skipLibCheck": true,
-    "outDir": "build",
+    "outDir": "./back-end/build",
     "allowJs": true,
     "typeRoots": ["node_modules/@types"]
   },
-  "exclude": ["node_modules"],
+  "exclude": ["../node_modules"],
   "include": ["**/*.ts"]
 }
