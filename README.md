@@ -7,8 +7,6 @@
 
 ## Install Dependecies
 - To install required dependiencies in your application, simply run: `npm install`.
-- Rename `vscode` directory to `.vscode` in order to set `VSCode settings`.
-
 ## Boot Application
 - To start your back-end application, simply run: `npm run api:dev:start`
 - To start your front-end application, simply run: `npm run client:start`
