@@ -13,9 +13,8 @@ export const ROUTE_VALIDATIONS = {
       .notEmpty()
       .withMessage('Description must be of 4 and 255 characters length.'),
     EMAIL: body('email')
-      .isString()
+      .isEmail()
       .trim()
-      .isLength({ max: 30, min: 4 })
       .notEmpty()
       .withMessage('Name must be of 4 and 30 characters length'),
     PASSWORD: body('password')
@@ -39,9 +38,9 @@ export const ROUTE_VALIDATIONS = {
     YEAR: body('year')
       .isString()
       .trim()
-      .isLength({ max: 255, min: 4 })
+      .isLength({ max: 4, min: 4 })
       .notEmpty()
-      .withMessage('Description must be of 4 and 255 characters length.'),
+      .withMessage('Description must be of 4 and 4 characters length.'),
   },
   QUERY: {
     Id: query('id').isNumeric().optional().withMessage('id must be a number.'),
