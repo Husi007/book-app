@@ -1,5 +1,7 @@
+
+import env from "react-dotenv";
 import axios, { AxiosResponse } from 'axios';
-import { API_PATHS, REACT_APP_API_URL } from './constants';
+import { API_PATHS } from './constants';
 import { IUser, IUserResponse } from './intefaces';
 
 const setLocalStorage = (response: IUserResponse) => {
@@ -16,7 +18,7 @@ const signUp = (
   password: string
 ): Promise<IUserResponse> => {
   return axios
-    .post(`${REACT_APP_API_URL}${API_PATHS.SIGN_UP}`, {
+    .post(`${env.REACT_APP_API_URL}${API_PATHS.SIGN_UP}`, {
       email,
       password,
       username,
@@ -30,7 +32,7 @@ const signUp = (
 
 const signIn = (email: string, password: string): Promise<IUserResponse> => {
   return axios
-    .post(`${REACT_APP_API_URL}${API_PATHS.SIGN_IN}`, {
+    .post(`${env.REACT_APP_API_URL}${API_PATHS.SIGN_IN}`, {
       email,
       password,
     })

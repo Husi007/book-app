@@ -10,6 +10,7 @@ export interface IBookResponse {
   updatedAt: string;
   userId: number;
   year: string;
+  description: string;
 }
 export interface IUser {
   email: string;

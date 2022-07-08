@@ -1,7 +1,6 @@
 export const ROUTES = {
   BOOK: '/book',
-  LOGIN: '/login',
-  SIGN_IN: '/signIn',
+  SIGN_IN: '/',
   SIGN_UP: '/signUp',
 };
 
@@ -21,20 +20,26 @@ export const HEADINGS = {
   CREATE_BOOK: {
     LABEL: 'Create Book',
   },
-  LOGIN: {
+  SIGN_IN: {
     LABEL: 'Login',
   },
   SIGN_UP: {
     LABEL: 'Sign Up',
   },
+  BOOKS_COMPONENT: {
+    LABEL: 'Books Component',
+  },
+};
+
+export const TABEL_HEADS = {
+  TITLE: 'Title',
+  YEAR: 'Year',
+  DESCRIPTION: 'Description',
 };
 
 export const LINKS = {
   BOOK: {
     LABEL: 'Book',
-  },
-  LOGIN: {
-    LABEL: 'Login',
   },
   SIGN_IN: {
     LABEL: 'Sign In',
@@ -45,6 +50,10 @@ export const LINKS = {
   SIGN_UP: {
     LABEL: 'Sign Up',
   },
+};
+
+export const MESSAGES = {
+  SIGN_IN_IF_ALREADY_HAVE_ACCOUNT: "Don't have an account? ",
 };
 
 export const PLACE_HOLDERS = {

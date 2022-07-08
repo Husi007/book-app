@@ -1,0 +1,39 @@
+.custom-input-feild {
+  width: auto;
+  background-color: beige;
+  border-radius: 10px;
+  height: 32%;
+  text-align: center;
+}
+
+.body {
+  background-color: aqua;
+}
+.col-xs-3 {
+  margin-left: 10px;
+  border-radius: 10px;
+}
+
+.button-ce {
+  margin-left: 270px;
+}
+
+.table {
+  width: 60%;
+  margin-top: 2%;
+  margin-left: 20%;
+}
+
+th {
+  height: 70px;
+} 
+
+tbody {
+  border-style: dotted;
+  border-width: 2px;
+}
+
+thead {
+  border-style: dotted;
+  border-width: 2px;
+}

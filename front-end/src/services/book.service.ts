@@ -1,11 +1,11 @@
 import axios from 'axios';
 import authHeader from './auth-header';
-import { API_PATHS, REACT_APP_API_URL } from './constants';
+import env from "react-dotenv";
+import { API_PATHS } from './constants';
 
 const getBooks = (): Promise<any> => {
-  return axios.get(`${REACT_APP_API_URL}${API_PATHS.BOOKS}`, {
+  return axios.get(`${env.REACT_APP_API_URL}${API_PATHS.BOOKS}`, {
     headers: authHeader(),
-    // params: { limit: 4, page: 1 },
   });
 };
 
@@ -15,7 +15,7 @@ const createBook = (
   year: string
 ): Promise<any> => {
   return axios.post(
-    `${REACT_APP_API_URL}${API_PATHS.BOOKS}`,
+    `${env.REACT_APP_API_URL}${API_PATHS.BOOKS}`,
     { description, title, year },
     {
       headers: authHeader(),
