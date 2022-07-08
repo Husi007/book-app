@@ -52,7 +52,7 @@
     }
   },
   "lint-staged": {
-    "back-end/**/*.{ts,js}": [
+    "back-end/src**/*.{ts,js}": [
       "npm run prettier:check",
       "npm run prettier:write",
       "npm run tslint",
